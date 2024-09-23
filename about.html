@@ -31,10 +31,10 @@
       #fig-1 img.show-by-default {
         display: block;
       }
-      #fig-1:hover img.show-on-interact {
+      #fig-1:is(:hover,:active) img.show-on-interact {
         display: block;
       }
-      #fig-1:hover img.show-by-default {
+      #fig-1:is(:hover,:active) img.show-by-default {
         display: none;
       }
     </style>
