@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yankuan Zhang | About</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      main {
+        margin: 16px;
+      }
+
+      span.char-sizing {
+        display: inline-block;
+      }
+
+      span.char-sizing img {
+        width: 32px;
+        height: auto;
+        padding: 4px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      #fig-1 img.show-on-interact {
+        display: none;
+      }
+      #fig-1 img.show-by-default {
+        display: block;
+      }
+      #fig-1:hover img.show-on-interact {
+        display: block;
+      }
+      #fig-1:hover img.show-by-default {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+      <nav>
+        <a href="./" title="Home">
+          <img class="banner" src="./img/zyk.jpg" alt="" role="presentation">
+        </a>
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>About Yankuan Zhang</h1>
+      <p><span lang="zh-Hans">张延宽</span> in Simplified Chinese, or <span lang="zh-Hant">張延寛</span> in Traditional Chinese, or Yankuan Zhang in English.</p>
+      <dl>
+        <dt>Family name:</dt>
+        <dd>
+          <ruby>
+            <span class="char-sizing">
+              <img src="./img/zhang.gif" alt="张" />
+            </span>
+            <rp>(</rp>
+            <rt>Zhāng</rt>
+            <rp>)</rp>
+          </ruby>
+        </dd>
+
+        <dt>Given name:</dt>
+        <dd>
+          <ruby>
+            <span class="char-sizing">
+              <img src="./img/yan.gif" alt="延" />
+            </span>
+            <rp>(</rp>
+            <rt>Yán</rt>
+            <rp>)</rp>
+          </ruby>
+          <ruby>
+            <span class="char-sizing">
+              <img src="./img/kuan.gif" alt="宽" />
+              <rp>(</rp>
+            </span>
+            <rt>Kuān</rt>
+            <rp>)</rp>
+          </ruby>
+        </dd>
+      </dl>
+      <ul>
+        <li><span lang="zh-Hans">张</span> means “to open” or “to spread”</li>
+        <li><span lang="zh-Hans">延</span> means “to extend” or “to prolong”</li>
+        <li><span lang="zh-Hans">宽</span> means “broad” or “wide”</li>
+      </ul>
+      <p>Three different characters, kinda same idea.</p>
+      <p>
+        Here’s a picture of me eating
+        <ruby>
+          饺子
+          <rp>(</rp>
+          <rt>jiǎozi</rt>
+          <rp>)</rp>
+        </ruby>
+        (🥟), using hands but no <ruby>筷子
+          <rp>(</rp>
+          <rt>kuàizi</rt>
+          <rp>)</rp>
+        </ruby> (🥢), because I was a little boy who likes to
+        live on the edge:
+      </p>
+      <figure id="fig-1">
+        <img
+          class="show-by-default"
+          src="./img/dumpling-1.jpg"
+          alt="Yankuan eating jiaozi with hands"
+        />
+        <img
+          class="show-on-interact"
+          src="./img/dumpling-2.jpg"
+          alt="Yankuan eating jiaozi with hands"
+        />
+        <figcaption>Me eating jiaozi with hands</figcaption>
+      </figure>
+      <p>In case you are wondering, my mom was my hairstylist.</p>
+      <p>Oh, BTW, I’m on <a href="https://www.duolingo.com/profile/Sutsugua">Duolingo</a>.</p>
+    </main>
+    <footer>
+      <p>©2024</p>
+      <p>
+        ​Banner「張延寬」by Yuerong Xia
+      </p>
+    </footer>
+  </body>
+</html>
