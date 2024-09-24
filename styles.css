@@ -8,8 +8,16 @@ main {
   margin: 32px;
 }
 
+main ul {
+  margin-inline-start: 16px;
+}
+
+main p {
+  margin: 16px 0;
+}
+
 nav {
-  background-color: #def;
+  background-color: #eee;
   padding: 12px;
 }
 
@@ -47,6 +55,6 @@ nav ul li a {
 
 footer {
     padding: 16px; 
-    background-color: #eee;
+    background-color: #ddd;
     font-size: 12px;
 }
