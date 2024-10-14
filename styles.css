@@ -42,6 +42,7 @@ nav img.banner {
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
 }
 
 nav ul li {
