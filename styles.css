@@ -54,6 +54,20 @@ nav ul li a {
   color: #222;
 }
 
+nav.breadcrumb ol {
+  display: flex;
+  margin: 0;
+  gap: 8px;
+}
+
+nav.breadcrumb li {
+  list-style-type: '/';
+}
+
+nav.breadcrumb li:first-of-type {
+  list-style-type: none;
+}
+
 footer {
     padding: 16px; 
     background-color: #ddd;
