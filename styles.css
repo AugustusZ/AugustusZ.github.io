@@ -54,18 +54,25 @@ nav ul li a {
   color: #222;
 }
 
-nav.breadcrumb ol {
+nav.breadcrumbs ol {
   display: flex;
   margin: 0;
-  gap: 8px;
 }
 
-nav.breadcrumb li {
-  list-style-type: '/';
-}
-
-nav.breadcrumb li:first-of-type {
+nav.breadcrumbs li {
   list-style-type: none;
+}
+
+nav.breadcrumbs li:not(:last-child)::after {
+  content: "∋";
+  display: inline-block;
+  color: #666;
+  margin-inline-start: 4px;
+  margin-inline-end: 8px;
+}
+
+nav.breadcrumbs li:last-child a {
+  text-decoration: none;
 }
 
 nav a[aria-current="page"] {
