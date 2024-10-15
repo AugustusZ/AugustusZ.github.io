@@ -16,24 +16,24 @@ main p {
   margin: 16px 0;
 }
 
-nav {
+header {
   background-color: #eee;
   padding: 12px;
 }
 
-nav img.banner {
+img.logo {
   width: 100%;
   height: auto;
   mix-blend-mode: multiply;
 }
 
 @media screen and (min-width: 320px) {
-  nav img.banner {
+  img.logo {
     height: 25px;
     width: auto;
   }
 
-  nav {
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
