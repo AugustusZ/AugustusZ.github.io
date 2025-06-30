@@ -5,11 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Yankuan Zhang | Blog</title>
     <link rel="preload" href="/img/zyk.jpg" as="image" />
-    <link rel="icon" href="/img/favicon.ico" sizes="32x32">
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="icon" href="/img/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
 
+  <style>
+    .bookcase {
+      display: flex;
+      flex-direction: column;
+      border: 10px solid burlywood;
+      width: 80vw;
+      margin: 20px auto;
+    }
+    .shelf {
+      border: 10px solid burlywood;
+      height: 200px;
+
+      display: flex;
+      align-items: end;
+      gap: 20px;
+    }
+    .group {
+      display: flex;
+      align-items: end;
+      position: relative;
+    }
+
+    .group::after {
+      content: attr(data-group);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
+    }
+    .item {
+      border: 1px solid darkgray;
+      color: gray;
+      padding: 10px 2px;
+      min-height: 100px;
+      max-height: 120px;
+
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+
+      transition: transform 0.2s;
+    }
+
+    .item:hover {
+      transform: translateY(-10px);
+    }
+  </style>
   <body>
     <header>
       <a href="/" title="Home">
@@ -22,8 +68,54 @@
         </ul>
       </nav>
     </header>
-    <img src="/img/coming-soon.jpg" alt="Coming soon" style="width: 100%" />
-    <main></main>
+    <div class="bookcase" style="display: none">
+      <div class="shelf">
+        <div class="group" data-group="2024">
+          <div class="item">Some book</div>
+          <div class="item">Another one</div>
+          <div class="item">This onee</div>
+          <div class="item">Hi</div>
+          <div class="item">Hi</div>
+          <div class="item">Another one</div>
+          <div class="item">Hia</div>
+          <div class="item">Hio</div>
+          <div class="item">Title here</div>
+        </div>
+        <div class="group" data-group="2025">
+          <div class="item">Some book</div>
+          <div class="item">Another one</div>
+          <div class="item">This is a long one</div>
+          <div class="item">Hi</div>
+          <div class="item">Title here</div>
+        </div>
+      </div>
+      <div class="shelf">
+        <div class="group" data-group="2024">
+          <div class="item">Some book</div>
+          <div class="item">Another one</div>
+          <div class="item">This is a long one</div>
+          <div class="item">Hi</div>
+          <div class="item">Title here</div>
+        </div>
+        <div class="group" data-group="2025">
+          <div class="item">Some book</div>
+          <div class="item">Another one</div>
+          <div class="item">This is a long one</div>
+          <div class="item">Hi</div>
+          <div class="item">Title here</div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <ul>
+        <li>
+          <a href="./marquez">读加西亚·马尔克斯</a>
+        </li>
+        <li>
+          <a href="./niao-ming.html">鸟命</a>
+        </li>
+      </ul>
+    </main>
     <footer>
       <p>©2024</p>
       <p>​Logo「張延寬」by Yuerong Xia</p>
