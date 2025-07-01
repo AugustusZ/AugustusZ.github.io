@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yankuan Zhang | Blog | How to convert Markdown to
+HTML</title>
+    <link rel="preload" href="/img/zyk.jpg" as="image" />
+    <link rel="icon" href="/img/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="/styles.css" />
+     <style>
+      p, li, a {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 2;
+      }
+
+      h2 {
+        margin-top: 32px;
+      }
+
+      a {
+        color: #567;
+      }
+
+      main {
+        max-width: 960px;
+        margin: 32px auto;
+        padding: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/" title="Home">
+        <img class="logo" src="/img/zyk.jpg" alt="Home" />
+      </a>
+      <nav aria-label="Site">
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <ol>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li>
+            <a href="#" aria-current="page">How to convert Markdown to
+HTML</a>
+          </li>
+        </ol>
+      </nav>
+      <h1>How to convert Markdown to HTML</h1>
+      <p><time datetime="Jun 30, 2025">Jun 30, 2025</time></p>
+      <p>Requirements:</p>
+      <ul>
+      <li>HTML template</li>
+      <li>Custom CSS</li>
+      <li>Breadcrumbs</li>
+      </ul>
+      <h2 id="basic-convert">Basic convert</h2>
+      <p>Start with a <code>.md</code> file.</p>
+      <div class="sourceCode" id="cb1"><pre
+      class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> ./index.md  <span class="at">-o</span> ./export-1.html <span class="at">--standalone</span></span></code></pre></div>
+      <p>See <a href="./export-1.html">./export-1.html</a></p>
+      <h2 id="use-template">Use template</h2>
+      <p>Now let’s add the template <code>template.html</code> for
+      wrapping the Markdown content between header and footer:</p>
+      <details>
+      <summary>
+      <code>template.html</code>
+      </summary>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;$lang$&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+    &lt;title&gt;Yankuan Zhang | Blog | $title$&lt;/title&gt;
+    &lt;link rel=&quot;preload&quot; href=&quot;/img/zyk.jpg&quot; as=&quot;image&quot; /&gt;
+    &lt;link rel=&quot;icon&quot; href=&quot;/img/favicon.ico&quot; sizes=&quot;32x32&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/img/apple-touch-icon.png&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/styles.css&quot; /&gt;
+     &lt;style&gt;
+      p, li, a {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 2;
+      }
+
+      h2 {
+        margin-top: 32px;
+      }
+
+      a {
+        color: #567;
+      }
+
+      main {
+        max-width: 960px;
+        margin: 32px auto;
+        padding: 32px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;a href=&quot;/&quot; title=&quot;Home&quot;&gt;
+        &lt;img class=&quot;logo&quot; src=&quot;/img/zyk.jpg&quot; alt=&quot;Home&quot; /&gt;
+      &lt;/a&gt;
+      &lt;nav aria-label=&quot;Site&quot;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/blog&quot; aria-current=&quot;page&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;nav class=&quot;breadcrumbs&quot; aria-label=&quot;Breadcrumbs&quot;&gt;
+        &lt;ol&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a href=&quot;#&quot; aria-current=&quot;page&quot;&gt;$title$&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/nav&gt;
+      $body$
+    &lt;/main&gt;
+    &lt;footer&gt;
+      &lt;p&gt;©2024–2025&lt;/p&gt;
+      &lt;p&gt;​Logo「張延寬」by Yuerong Xia&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </details>
+      <p>And add some metadata at the beginning of the <code>.md</code>
+      file in YAML</p>
+      <div class="sourceCode" id="cb3"><pre
+      class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> How to convert Markdown to HTML</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lang</span><span class="kw">:</span><span class="at"> en</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div>
+      <p>And run</p>
+      <div class="sourceCode" id="cb4"><pre
+      class="sourceCode sh"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> ./index.md  <span class="at">-o</span> ./export-2.html <span class="at">--standalone</span> <span class="at">--template</span> ../template.html </span></code></pre></div>
+      <p>See <a href="./export-2.html">./export-2.html</a></p>
+      <p>And I think that’s it!</p>
+    </main>
+    <footer>
+      <p>©2024–2025</p>
+      <p>​Logo「張延寬」by Yuerong Xia</p>
+    </footer>
+  </body>
+</html>
