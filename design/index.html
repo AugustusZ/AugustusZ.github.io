@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yankuan Zhang | Blog</title>
+    <link rel="preload" href="/img/zyk.jpg" as="image" />
+    <link rel="icon" href="/img/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <style>
+    main {
+        max-width: 960px;
+        margin: 32px auto;
+        padding: 32px;
+    }
+
+    .bookcase {
+      display: flex;
+      flex-direction: column;
+      border: 10px solid burlywood;
+      width: 80vw;
+      margin: 20px auto;
+    }
+    .shelf {
+      border: 10px solid burlywood;
+      height: 200px;
+
+      display: flex;
+      align-items: end;
+      gap: 20px;
+    }
+    .group {
+      display: flex;
+      align-items: end;
+      position: relative;
+    }
+
+    .group::after {
+      content: attr(data-group);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
+    }
+    .item {
+      border: 1px solid darkgray;
+      color: gray;
+      padding: 10px 2px;
+      min-height: 100px;
+      max-height: 120px;
+
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+
+      transition: transform 0.2s;
+    }
+
+    .item:hover {
+      transform: translateY(-10px);
+    }
+  </style>
+  <body>
+    <header>
+      <a href="/" title="Home">
+        <img class="logo" src="/img/zyk.jpg" alt="Home" />
+      </a>
+      <nav aria-label="Site">
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/photo">Photo</a></li>
+          <li><a href="/design" aria-current="page">Design</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <ol>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="#" aria-current="page">Design</a>
+          </li>
+        </ol>
+      </nav>
+      <h1>Design</h1>
+      <div>
+        <img src="/img/mmc-logo.svg" alt="MMC logo" width="100%" />
+      </div>
+    </main>
+    <footer>
+      <p>©2024–2025</p>
+      <p>​Logo「張延寬」by Yuerong Xia</p>
+    </footer>
+  </body>
+</html>
