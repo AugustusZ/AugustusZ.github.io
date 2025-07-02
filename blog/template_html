@@ -9,17 +9,8 @@
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
     <link rel="stylesheet" href="/styles.css" />
      <style>
-      p, li, a {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        line-height: 2;
-      }
-
       h2 {
         margin-top: 32px;
-      }
-
-      a {
-        color: #567;
       }
 
       main {

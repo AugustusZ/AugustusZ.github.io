@@ -11,6 +11,12 @@
   </head>
 
   <style>
+    main {
+        max-width: 960px;
+        margin: 32px auto;
+        padding: 32px;
+    }
+
     .bookcase {
       display: flex;
       flex-direction: column;
@@ -107,6 +113,17 @@
       </div>
     </div>
     <main>
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <ol>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="#" aria-current="page">Blog</a>
+          </li>
+        </ol>
+      </nav>
+      <h1>Blog</h1>
       <ul>
         <li>
           <a href="./marquez/">读加西亚·马尔克斯</a>
