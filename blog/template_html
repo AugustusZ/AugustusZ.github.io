@@ -30,6 +30,13 @@
         color: #555;
         padding: 2px 4px;
       }
+
+      blockquote {
+        border-left: 4px #bf7373 solid;
+        padding-inline: 32px;
+        font-style: italic;
+        color: #7d3030;
+      }
     </style>
   </head>
   <body>
