@@ -1,7 +1,5 @@
-# 阅读路径
-
 ```mermaid
-graph LR
+flowchart LR
 subgraph 2020
   荒诞医学史
   异类心理学["异类心理学：40个改变认知的疯狂思想实验"]
